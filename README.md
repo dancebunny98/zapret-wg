@@ -6,8 +6,9 @@ It accepts downstream clients on `wg-clients`, keeps the normal default route on
 and sends only selected destinations through `wg-uplink` using nftables marks and policy
 routing.
 
-
-
+<div align="center">
+  <img width = "33%" src="https://i.imgur.com/QJPmZdX.png">
+</div>
 ## Privacy-First Defaults
 
 The local project is now intentionally conservative.
