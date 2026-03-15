@@ -1,0 +1,44 @@
+{
+  "api": {
+    "listen": "127.0.0.1:18080",
+    "token": "change-me"
+  },
+  "state": {
+    "path": "/var/lib/vpngw/state.json"
+  },
+  "wireguard": {
+    "client_interface": "wg-clients",
+    "uplink_interface": "wg-uplink",
+    "server_endpoint": "REQUIRED_SERVER_ENDPOINT:51820",
+    "server_public_key": "AUTO_SET_BY_INSTALLER",
+    "client_cidr_v4": "10.70.0.0/24",
+    "client_dns": "10.70.0.1",
+    "mtu": 1420,
+    "keepalive_sec": 25
+  },
+  "dataplane": {
+    "table_name": "vpngw",
+    "fwmark_hex": "0x66",
+    "route_table_id": 166,
+    "client_input_if": "wg-clients",
+    "strict_on_uplink_down": true
+  },
+  "dns": {
+    "listen_udp": "10.70.0.1:53",
+    "listen_tcp": "10.70.0.1:53",
+    "direct_upstream": "REQUIRED_DIRECT_DNS:53",
+    "vpn_upstream": "REQUIRED_VPN_DNS:53",
+    "query_timeout": "2s"
+  },
+  "policy": {
+    "failure_threshold": 2,
+    "pin_ttl": "1h",
+    "ip_ttl": "1h"
+  },
+  "static": {
+    "ips_file": "/etc/vpngw/force_vpn_ips.txt",
+    "domains_file": "/etc/vpngw/force_vpn_domains.txt",
+    "resolve_interval": "15m",
+    "resolve_enabled": false
+  }
+}
