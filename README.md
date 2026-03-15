@@ -9,7 +9,7 @@ routing.
 <div align="center">
   <img width = "33%" src="https://i.imgur.com/QJPmZdX.png">
 </div>
-## Privacy-First Defaults
+# Privacy-First Defaults
 
 The local project is now intentionally conservative.
 
